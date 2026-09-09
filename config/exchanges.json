@@ -1,0 +1,11 @@
+{
+  "binance": {
+    "region": "global"
+  },
+  "binance_eu": {
+    "region": "eu"
+  },
+  "binance_us": {
+    "region": "us"
+  }
+}
