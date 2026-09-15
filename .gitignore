@@ -11,3 +11,7 @@ __pycache__/
 # Environment files
 .env
 venv/
+
+# localhost routing IP
+config/
+

@@ -1,4 +1,9 @@
 import streamlit as st
+st.set_page_config(
+    page_title="Nutcracker PnL Checker",
+    page_icon="favicon.ico",   # file must be in same folder as app.py
+    layout="wide"
+)
 import logging
 import ccxt
 import json
@@ -10,11 +15,7 @@ from routing.router import route
 import pnl
 importlib.reload(pnl)
 SERVER_IP = requests.get("https://api.ipify.org").text
-st.set_page_config(
-    page_title="Nutcracker PnL Checker",
-    page_icon="favicon.ico",   # file must be in same folder as app.py
-    layout="wide"
-)
+
 
 
 # Disable detailed error tracebacks in the UI (privacy + UX)
@@ -249,7 +250,7 @@ with st.expander("⚙️ Settings", expanded=True):
 
 
 st.markdown("### Live Log Output")
-log_container = st.empty()
+log_container = st.container()
 # ---------------------------------------------------------
 # Logging Setup
 # ---------------------------------------------------------
